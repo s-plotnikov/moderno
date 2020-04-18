@@ -69,13 +69,13 @@
     &-title{
         margin-bottom: 10px;
         font-size: 48px;
-        font-weight: 700;
+        @include f700; 
         line-height: 72px;
     }
     &-text{
         margin-bottom: 50px;
         font-size: 20px;
-        font-weight: 500;
+        @include f500;
         line-height: 30px;
     }
     &-form{
@@ -90,12 +90,12 @@
             height: 56px;
             border: none;
             font-size: 14px;
-            font-weight: 500; 
+            @include f500;
             padding-left: 25px;
             padding-right: 60px;
             &::placeholder{
                 color: #90a4ae;
-                font-weight: 500;
+                @include f500;
             }
         }
         button{
@@ -156,7 +156,7 @@
         padding: 10px 30px;
         align-items: center;
         min-height: 90px;
-        font-weight: 500;
+        @include f500;
         border-bottom: 1px solid #e7ecf2;
     }
     &-name{
@@ -175,7 +175,7 @@
     &-price{
         font-size: 20px;
         color: $bg;
-        font-weight: 700;
+        @include f700;
     }
     &-info{
         display: flex;
@@ -200,7 +200,7 @@
         }
         span{
             font-size: 14px;
-            font-weight: 500; 
+            @include f500;
         } 
     }
     &-star{
@@ -229,6 +229,7 @@
 
 // end products
 //start product slider
+
 .product-slider{
     padding: 110px 0px 120px;
     .slick-dots{
@@ -257,18 +258,59 @@
     }
 }
   
-.Ellipse_6 {
-    border-radius: 50%;
-    background-color: rgb(232, 232, 232);
-    position: absolute;
-    left: 915px;
-    top: 2761px;
-    width: 22px;
-    height: 22px;
-    z-index: 168;
-  }
-  
+
   
 // end product slider
+// start adventages
 
+.adventages{
+    background-color: $bg;
+    padding: 110px 0px;
+}
+.adventages__title{
+    color: #ffffff;
+}
+.adventages__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.adventages__item{
+    max-width: 370px;
+    text-align: center;
+    padding: 0px 15px;
+    &:hover{
+        .adventages__item-images{
+            background-color: $green;
+            path{
+                fill: #ffffff;
+            }
+        }
+        .adventages__item-title{
+            color: $green;
+        }
+    }
+    &-images{
+        width: 114px;
+        height: 114px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 30px;
+        transition: all .5s;
+    }
+    &-title{
+        margin-bottom: 25px;
+        color: #ffffff;
+        @include f500;
+        font-size: 24px;
+        transition: all .5s;
+    }
+    &-text{
+        font-size: 15px;
+    }
+}
+
+// end adventages
   
