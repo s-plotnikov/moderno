@@ -1436,6 +1436,48 @@ button.icon-unsorted{
     justify-content: space-between;
     padding: 30px 0px;   
 }
+.jq-selectbox{
+    width: 90px;
+    height: 27px;
+    margin-top: -5px;
+}
+.jq-selectbox__trigger{
+    border-left: none;
+}
+.jq-selectbox__select {
+    height: 32px;
+    padding: 0 20px 0 10px;
+    border: 1px solid #d5d5d5;
+    border-bottom-color: #d5d5d5;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: #70838d;
+    text-shadow: none;
+}
+.jq-selectbox__dropdown {
+    box-sizing: border-box;
+    width: 100%;
+    margin: -1px 0 0;
+    padding: 0;
+    border: 1px solid #d5d5d5;
+    border-radius: 0px;
+    background: #FFF;
+    box-shadow: none;
+    font-family: 'Roboto', sans-serif;
+}
+.jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 14px;
+    right: 9px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid $green;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
 .price__product{
     font-size: 22px;
     @include f500;
@@ -1561,17 +1603,20 @@ button.icon-unsorted{
     }
 }
 
+
 // end product-one
 // start page-404
 
 .page-404__wrapper,
-.about__wrapper{
+.about__wrapper,
+.contact__wrapper{
     border: 1px solid #dcdcdc;
     background-color: #fff;
     margin-bottom: 150px;
 }
 .page-404__head,
-.about__head{
+.about__head,
+.contact__head{
     font-size: 24px;
     color: #444444;
     padding: 23px 27px;
@@ -1641,6 +1686,571 @@ button.icon-unsorted{
 }
 // end about
 
+//start contact
+
+.contact__head{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.contact__inner{
+    padding: 35px 40px 15px;
+}
+.contact__map{
+    margin-bottom: 50px;
+    iframe{
+        width: 100%;
+        height: 415px;
+    }
+}
+.contact__box{
+    display: flex;
+}
+.contact__info{
+    margin-right: 30px;
+    max-width: 300px;
+    width: 100%;
+}
+.contact__info-item{
+    margin-bottom: 30px;
+}
+.contact__info-title{
+    padding-bottom: 20px;
+    position: relative;
+    font-size: 20px;
+    @include f500;
+    color: $bg;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    &::after{
+        content: '';
+        width: 44px;
+        height: 4px;
+        background-color: $green;
+        left: 40px;
+        bottom: 0;
+        position: absolute;
+    }
+    &::before{
+        color: $green;
+        font-size: 24px;
+        position: absolute;
+        left: 0;
+    }
+}
+.contact__info-content{
+    padding-left: 40px;
+    color: #707070;
+    max-width: 230px;
+}
+.contact__form-title{
+    margin-bottom: 16px;
+    font-size: 24px;
+    @include f500;
+    color: #333333;
+}
+.contact__form-row{
+    display: flex;
+    justify-content: space-between;   
+}
+.contact__form{
+    width: 100%;
+    input{
+        border: none;
+        height: 43px;
+        padding-left: 17px;
+        padding-right: 17px;
+        background-color: #f1f4f5;
+        width: 350px;
+        display: block;
+        margin-bottom: 30px;
+        &::placeholder{
+            font-size: 15px;
+            color: #7a7a7a;
+        }
+    }
+    textarea{
+        border: none;
+        height: 190px;
+        padding: 13px 17px;
+        background-color: #f1f4f5;
+        width: 100%;
+        display: block;
+        resize: none;
+        margin-bottom: 23px;
+        &::placeholder{
+            font-size: 15px;
+            color: #7a7a7a;
+        }
+    }
+    button{
+        border: none;
+        background-color: $green;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+        @include f700;
+        color: #fff;
+        padding: 20px 25px;
+        width: 190px;
+    }
+}
+
+//end contact
+
+// start settings
+
+.settings{
+    padding-bottom: 100px;
+}
+.product-one__tabs.settings__tabs{
+    display: flex;
+    .tabs{
+        height: 100%;
+        max-width: 270px;
+        width: 100%;
+        margin-right: 30px;
+        border: 1px solid #dcdcdc;
+        border-bottom: none;
+        text-align-last: left;
+        display: block;
+        span{
+            display: block;
+            background-color: #fff;
+            border-bottom: 1px solid #dcdcdc;
+            padding: 17px 17px 17px 50px;
+            color: #707070;
+            font-size: 14px;
+            @include f500;
+            &.active{
+                border-bottom: 2px solid $green;
+                color: #37474f;
+                &::before{
+                    color: $green;
+                }
+            }
+            &::before{
+                left: 24px;
+                color: #444;
+            }
+        }
+    }
+    .tabs .tab+.tab{
+        border-left: none;
+    }
+    .tab_content{
+        width: 100%;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+    button{
+        border: none;
+        background-color: $green;
+        color: #fff;
+        font-size: 15px;
+        @include f500;
+        padding: 15px 30px;
+        cursor: pointer;
+        margin-top: 4px;
+        margin-left: 255px;
+    }
+}
+.page-box{
+    background-color: #fff;
+    border: 1px solid #dedede;
+    min-height: 100%;
+}
+.page-box__title{
+    border-bottom: 1px solid #dedede;
+    padding: 18px 34px;
+    font-size: 24px;
+    color: $bg;
+    @include f500;
+}
+.page-box__content{
+    padding: 30px 35px 80px;
+}
+.settings__line{
+    margin-bottom: 21px;
+    display: flex;
+    align-items: center;
+    label{
+        color: #444444;
+        width: 260px;;
+    }
+    input{
+        max-width: 540px;
+        width: 100%;
+        background-color: #f9f9f9;
+        height: 40px;
+        color: #000000;
+        border: 1px solid #dedede;
+        padding: 15px;
+    }
+    select{
+        max-width: 540px;
+        width: 100%;
+        background-color: #f9f9f9;
+        height: 40px;
+        color: #000000;
+        border: 1px solid #dedede;
+        padding-left: 15px;
+        font-size: 14px;
+    }
+    .jq-selectbox{
+        width: 100%;
+        max-width: 540px;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 15px;
+        line-height: 38px;
+        @include f500;
+        border: 1px solid #dedede;
+        border-bottom-color: #dedede;
+        border-radius: 0;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: #707070;
+        text-shadow: none;
+    }
+    .jq-selectbox__trigger-arrow{
+        top: 16px;
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+    .jq-selectbox__dropdown {
+        margin: -1px 0 0;
+    }
+}
+
+// end settings
+//start profile
+
+.profile__inner{
+    display: flex;
+    margin-bottom: 30px;
+}
+.profile__aside{
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+    & .footer__social-link{
+        margin-bottom: 24px;
+    }
+}
+.profile__content{
+    width: 100%;
+}
+.profile-status{
+    font-size: 13px;
+    padding: 6px 9px 5px 30px;
+    border: 1px solid #d6d6d6;
+    color: #707070;
+    position: relative;
+    &::before{
+        position: absolute;
+        content: '';
+        top: 13px;
+        left: 11px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+    }
+}
+.profile-on{
+    &::before{
+        background-color: $green;
+    }    
+}
+.profile-off{
+    &::before{
+        background-color: $red;
+    }
+}
+.profile__aside-btn{
+    margin-bottom: 13px;
+    text-align: center;
+}
+.profile__aside-message{
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    @include f500;
+    padding: 18px 10px;
+    position: relative;
+    background-color: $text;
+    box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+    &::before{
+        content: "\f003";
+        position: absolute;
+        font-family: 'icomoon';
+        left: 50px;
+        top: 17px;
+    }
+}
+.profile__aside-following{
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    @include f700;
+    background-color: $green;
+    padding: 18px 10px;
+    box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+}
+.profile__banner{
+    padding: 20px;
+    border: 1px solid #dedede;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+.profile__banner-images{
+    background-image: url(../images/content/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 332px;
+    background-position: center;
+}
+.profile__items{
+    display: flex;
+    border: 1px solid #dedede;
+}
+.profile__item{
+    width: 25%;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 5px 17px;
+    & + .profile__item{
+        border-left: 1px solid #dedede;
+    }
+}
+.profile__item-title{
+    font-size: 14px;
+    color: $bg;
+    @include f500;
+}
+.profile__item-content{
+    font-size: 14px;
+    color: #707070;
+    @include f500;
+    &.profile__item-sales{
+        color: $bg;
+    }    
+}
+.profile-settings{
+    .product-one__tabs.settings__tabs{
+        .tabs span{
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 500;
+            color: #707070;
+            position: relative;
+            &.active::before{
+                color: $green;
+            }
+            &::before{
+                top: 15px;
+                left: 27px;
+                font-size: 14px;
+                font-family: 'icomoon';
+                color: #d0d0d0;
+                position: absolute;
+            }
+        }
+    }
+}
+.personal-box{
+    background-color: #fff;
+    padding: 35px 40px 25px;
+    border: 1px solid #dedede;
+}
+.personal-box__title{
+    margin-bottom: 25px;
+    @include f700;
+    color: $bg;
+    font-size: 20px;
+}
+.personal-box__text{
+    margin-bottom: 20px;
+    p{
+        color: #707070;
+    }
+}
+.personal-box__item-head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.personal-box__item-name{
+    @include f500;
+    font-size: 16px;
+    color: $bg;
+    font-style: italic;
+}
+.personal-box__item-number{
+    @include f700;
+    font-size: 16px;
+    color: $bg;
+}
+.personal-box__item-line{
+    height: 15px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    margin-bottom: 23px;
+    span{
+        display: block;
+        border-radius: 3px;
+        height: 15px;
+        background-image: url(../images/pro-bar.jpg);
+        background-repeat: repeat;
+    }
+}
+
+// end profile
+// start upload
+
+.upload__inner{
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 110px;
+    button{
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        margin-left: 175px;
+        cursor: pointer;
+    }
+}
+.upload__inner-title{
+    font-size: 24px;
+    @include f500;
+    padding: 16px 35px 18px;
+    color: $bg;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 40px;
+}
+.upload__inner-content{
+    margin-bottom: 30px;
+    padding-left: 45px;
+    padding-right: 50px;
+}
+.upload-line{
+    margin-bottom: 25px;
+    display: flex;
+    label{
+        padding-top: 5px;
+        min-width: 175px;
+        padding-right: 15px;
+        color: #444444;
+        span{
+            color: $green;
+        }
+        &::placeholder{
+            color: #707070;
+        }
+    }
+    select,
+    input,
+    textarea{
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+    }
+    textarea{
+        resize: none;
+        height: 150px;
+        padding: 8px 18px;
+    }
+    .jq-file {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+    }
+    input[type="file"]{
+        outline: none;
+    }
+    .jq-file__browse {
+        top: 5px;
+        right: auto;
+        left: 9px;
+        padding: 0px 12px;
+        border-left: 1px solid #d7d7d7;
+        border: 1px solid #d7d7d7;
+        border-radius: 0;
+        background: #fff;
+        box-shadow: none;
+        text-shadow: none;
+        font-size: 12px;
+        line-height: 26px;
+        color: #444444;
+    }
+    .jq-file__name {
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        padding: 0;
+        border: none;
+        border-bottom-color: transparent;
+        border-radius: 0px;
+        background: transparent;
+        box-shadow: none;
+        font-size: 12px;
+        color: #707070;
+        line-height: 40px;
+        margin-left: 100px;
+    }
+    .jq-selectbox{
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0px 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow{
+        border: none;
+        font-size: 15px;
+        right: 20px;
+        top: 0;
+        line-height: 40px;
+        &::before{
+            font-family: 'icomoon';
+            content: "\f0d7";
+            
+        }
+    }
+    .jq-selectbox__trigger{
+        border-left: none;
+    }
+}
+
+
+
+
+
+// end upload
 
 
 @import 'media';
